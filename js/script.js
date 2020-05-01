@@ -1,0 +1,1 @@
+if( isMobile.any() ) alert('Mobile');
