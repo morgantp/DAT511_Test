@@ -10,20 +10,21 @@ body {
 }
 
 #messageContainer {
-	padding-top: 10vh;
+	padding-top: 5vh;
 	text-align: center;
-	width: 300px;
-	height: 500px;
+	width: 400px;
+	height: 400px;
 	margin: 0 auto;
 }
 
 #phoneIMG {
 	width: 200px;
+	padding-bottom: 20px;
 }
 
 #debug {
 	text-align: center;
-	font-size: 25px;
+	font-size: 20px;
 }
 
 #warning {
@@ -33,18 +34,10 @@ body {
 .form-popup {
     display: none;
 	position: absolute;
-	padding-top: 25vh;
     top: 50%;
     left: 50%;
-    width: 400px;
-    height: 400px;
     margin-left: -200px;
-    margin-top: -200px;
     z-index: 9;
-    text-align: center;
-    outline: black;
-  }
-
-  #hackContainer {
-    background-color: lightblue;
+	text-align: center;
+	background-color: lightblue;
   }
