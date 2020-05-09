@@ -7,13 +7,17 @@
 </head>
 <body>
 
-<div id="warning"></div>
+	<a onclick="openHack()">Your Results!!!</a>
 
-<div id="messageContainer">
-	<img id="phoneIMG" src="images/phone.png">
+<div class="form-popup" id="hackContainer">
+	<div id="warning"></div>
+	<div id="messageContainer">
+		<img id="phoneIMG" src="images/phone.png">
+	</div>
+	<p id="debug"></p>
+	<script src="js/app.js"></script>
+	<a onclick="closeHack()">Close</a>
 </div>
-
-<p id="debug" style="color:#fff;"></p>
-<script src="js/app.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
