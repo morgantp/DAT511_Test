@@ -30,7 +30,7 @@
 		
 		debug.textContent = 'Alpha: '+alpha+ ', Beta: ' +beta+ ', and Gamma is: ' +gamma;		
 		
-		transform = 'rotateZ(' -alpha- 'deg) rotateX(' -beta- 'deg) rotateY(' +gamma+ 'deg)';			
+		transform = 'rotateZ(' +alpha+ 'deg) rotateX(' +beta+ 'deg) rotateY(' +gamma+ 'deg)';			
 		// 3D Transform	
 		messageContainer.style.webkitTransform = messageContainer.style.MozTransform = messageContainer.style.transform = transform;
 		// 2D-only for Opera
