@@ -2,11 +2,49 @@ html {
 	height:100%;
 }
 
+h1, h3, a {
+	font-family: 'Playfair Display', serif;
+}
+
+p {
+	margin: 0 auto;
+	font-family: 'Playfair Display', serif;
+	width: 50%;
+}
+
+
+#locationButton {
+	font-family: 'Playfair Display', serif;
+	color: blue;
+	text-decoration: underline;
+}
+
 body {
 	font-family: Helvetica, Arial, sans-serif;
 	-webkit-perspective: 500px;
 	-moz-perspective: 500px;
 	color: black;
+	background-color: lightskyblue;
+	text-align: center;
+}
+
+input {
+	display: inline-block;
+}
+
+label {
+	font-family: 'Playfair Display', serif;
+	display: grid;
+}
+
+.btn-dark {
+	font-family: 'Playfair Display', serif;
+}
+
+#quiz {
+	margin: 0 auto;
+	width: 80%;
+	background-color: white;
 }
 
 #messageContainer {
@@ -34,7 +72,7 @@ body {
 .form-popup {
     display: none;
 	position: absolute;
-    top: 50%;
+    top: 10px;
     left: 50%;
     margin-left: -200px;
     z-index: 9;

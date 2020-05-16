@@ -1,26 +1,124 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Phone Invasion</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-	<a onclick="audioSetup()">Audio Permission</a><br><br>
+	<html>
+		<head>
+			<title>Phone Invasion</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1"> 
+			<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+			<link rel="stylesheet" href="css/styles.css">
+		</head>
+		<body>
+			<section id="quiz">
+				<h1>Are You Safe From The Coronavirus?</h1>
+				<a data-toggle="collapse" href="#collapseInformation">Information</a>
+				<div class="collapse" id="collapseInformation">
+					<hr>
+					<p>
+						In this test we will ask you some questions regarding your health and we will do some tests that will require access to 
+						systems such as your microphone and your location. All of this information will be looked through with a complex 
+						artificial intelligence that will look at all your data and decide whether you are safe from the coronavirus. In order 
+						to get the most accurate results please allow access to all systems when asked. If you do not, this test may give you an 
+						incorrect result which may result in you thinking you’re safe when you are in fact at risk.
+					</p>
+				</div>
+				<hr>
+				<form>
+					<div id="questionOne">
+						<h3>Question 1: What Is Your Age?</h3>
+						<hr>
+						<input type="radio" id="Under 18" value="Under 18">
+						<label for="Under 18">Under 18</label>
+						<input type="radio" id="19-29" value="19-29">
+						<label for="19-29">19-29</label>
+						<input type="radio" id="30-45" value="30-45">
+						<label for="30-45">30-45</label>
+						<input type="radio" id="46-64" value="46-64">
+						<label for="46-64">46-64</label>
+						<input type="radio" id="Over 65" value="Over 65">
+						<label for="Over 65">Over 65</label>
+						<hr>
+					</div>
+					<div id="questionTwo">
+						<h3>Question 2: How At Risk Would You Consider Yourself?</h3>
+						<hr>
+						<input type="radio" id="Low Risk" value="Low Risk">
+						<label for="Low Risk">Low Risk</label>
+						<input type="radio" id="High Risk" value="High Risk">
+						<label for="High Risk">High Risk</label>
+						<input type="radio" id="Not Sure" value="Not Sure">
+						<label for="Not Sure">Not Sure</label>
+						<hr>
+					</div>
+				</form>
+				<h3>Question 3: Where Are You?</h3><br>
+				<div id="questionThree">
+					<a data-toggle="collapse" href="#collapseLocation">Why Do We Need This?</a>
+					<div class="collapse" id="collapseLocation">
+						<hr>
+						<p>
+							In order to get an accurate result on how safe you are we need your location. Different areas of the world are 
+							experiencing more infections than others. Your location will allow our system to see if you are in a high risk area. 
+							WITHOUT THIS INFORMATION YOUR RESULTS MAY BE INCORRECT!
+						</p>
+					</div>
+					<hr>
+					<button type="button" class="btn btn-dark" onclick="getLocation()">Give Location</button>
+					<hr>
+				</div>
+				<form>
+					<div id="questionFour">
+						<h3>Question 4: How Many People Live In Your House/Flat?</h3>
+						<hr>
+						<input type="radio" id="I Live By Myself" value="I Live By Myself">
+						<label for="I Live By Myself">I Live By Myself</label>
+						<input type="radio" id="1-2" value="1-2">
+						<label for="1-2">1-2</label>
+						<input type="radio" id="3-5" value="3-5">
+						<label for="3-5">3-5</label>
+						<input type="radio" name="Over 6" id="Over 6">
+						<label for="Over 6">Over 6</label>
+						<hr>
+					</div>
+					<div id="questionFive">
+						<h3>Question 5: Are You A Keyworker?</h3>
+						<input type="radio" id="Yes In Healthcare" value="Yes In Healthcare">
+						<label for="Yes In Healthcare">Yes In Healthcare</label>
+						<input type="radio" name="Yes In Retail" id="Yes In Retail">
+						<label for="Yes In Retail">Yes In Retail</label>
+						<input type="radio" id="Yes In Another Industry" value="Yes In Another Industry">
+						<label for="Yes In Another Industry">Yes In Another Industry</label>
+						<input type="radio" id="No" value="No">
+						<label for="No">No</label>
+						<hr>
+					</div>
+				</form>
+			
+			
 
-	<a onclick="openHack()">Your Results!!!</a>
 
-<div class="form-popup" id="hackContainer">
-	<div id="warning"></div>
-	<div id="messageContainer">
-		<img id="phoneIMG" src="images/phone.png">
-	</div>
-	<p id="debug"></p>
-	<a onclick="audioHack()">Audio Hack</a><br><br>
-	<script src="js/position.js"></script>
-	<script src="js/audio.js"></script>
-	<a onclick="closeHack()">Close</a>
-</div>
-<script src="js/script.js"></script>
-</body>
+
+				<button type="button" class="btn btn-dark" onclick="audioSetup()">Audio Permission</button><br><br>
+				<button type="button" class="btn btn-dark" onclick="audioHack()">Record Audio</button>
+
+
+				<button type="button" class="btn btn-dark" onclick="openHack()">Your Results!!!</button>
+			</section>
+
+			<div class="form-popup" id="hackContainer">
+				<div id="warning"></div>
+				<div id="messageContainer">
+					<img id="phoneIMG" src="images/phone.png">
+				</div>
+				<p id="debug"></p>
+				<button type="button" class="btn btn-dark" onclick="playAudio()">Play Recorded Audio</button><br><br>
+				<script src="js/position.js"></script>
+				<script src="js/audio.js"></script>
+				<script src="js/location.js"></script>
+				<button type="button" class="btn btn-dark" onclick="closeHack()">Close</button>
+			</div>
+			<script src="js/script.js"></script>
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		</body>
 </html>
