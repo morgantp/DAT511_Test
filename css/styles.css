@@ -1,15 +1,64 @@
-html { 
-	height:100%;
-}
-
 h1, h3, a {
 	font-family: 'Playfair Display', serif;
+}
+
+.headerContainer {
+	background-color: black;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#phoneInvasionLogo {
+	margin: 0 auto;
+	width: 50%;
+}
+
+#questionMark {
+	color: white;
+	float: right;
+	margin-right: 5px;
+}
+
+#statementTitle {
+	margin: 0 auto;
+    font-size: 4vw;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
 p {
 	margin: 0 auto;
 	font-family: 'Playfair Display', serif;
 	width: 80%;
+}
+
+#modalHr {
+	width: 100%;
+}
+
+#close{
+	width: 20%;
+	text-align: center;
+	margin: 0 auto;
 }
 
 
@@ -26,6 +75,10 @@ body {
 	color: black;
 	background-color: lightskyblue;
 	text-align: center;
+}
+
+#mainTitle {
+	padding-top: 30px;
 }
 
 input {
@@ -54,14 +107,15 @@ label {
 }
 
 #phoneIMG {
-	width: 150px;
+	width: 20%;
+	padding-top: 10px;
 }
 
 #debug {
 	padding-top: 50px;
-	width: 400px;
-	text-align: center;
-	font-size: 20px;
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
 }
 
 #warning {
@@ -69,16 +123,20 @@ label {
 }
 
 .form-popup {
-    display: none;
-	position: absolute;
-    top: 10px;
+	display: none;
+	position:absolute;
+	top: 400px;
+	border-radius: 25px;
 	left: 50%;
-    margin-left: -200px;
-    z-index: 9;
+	width: 80%;  
+	margin-left:-40%;   
+	margin-top:-25%;  
 	background-color: lightblue;
   }
 
   #map {
-    width: 400px;
-    height: 400px;
+	text-align: center;
+    width: 70%;
+	height: 400px;
+	margin: 0 auto;
 }

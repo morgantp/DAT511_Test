@@ -10,10 +10,29 @@
 			<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 			<link rel="stylesheet" href="css/styles.css">
+			<link rel="icon" href="images/phone invasion logo.png">
 		</head>
 		<body>
+			<section id="top" class="headerContainer">
+				<a id="myBtn">
+					<h1 id="questionMark">?</h1>
+				</a>
+				<div id="myModal" class="modal">
+
+				<!-- Modal content -->
+				<div class="modal-content">
+					<h1 id="statementTitle">Supporting Statement</h1>
+					<hr id="modalHr">
+					<p>Some text in the Modal..</p>
+					<hr id="modalHr">
+					<button id="close" class="btn btn-dark">Close</button>
+				</div>
+
+				</div>
+				<img id="phoneInvasionLogo" src="images/phone invasion logo.png" alt="Phone Invasion">
+			</section>
 			<section id="quiz">
-				<h1 id="top">Are You Safe From The Coronavirus?</h1>
+				<h1 id="mainTitle">Are You Safe From The Coronavirus?</h1>
 				<a data-toggle="collapse" href="#collapseInformation">Information</a>
 				<div class="collapse" id="collapseInformation">
 					<hr>
@@ -30,32 +49,32 @@
 					<div id="questionOne">
 						<h3>Question 1: What Is Your Age?</h3>
 						<hr>
-						<input type="radio" id="Under 18" value="Under 18">
-						<label for="Under 18">Under 18</label>
-						<input type="radio" id="19-29" value="19-29">
-						<label for="19-29">19-29</label>
-						<input type="radio" id="30-45" value="30-45">
-						<label for="30-45">30-45</label>
-						<input type="radio" id="46-64" value="46-64">
-						<label for="46-64">46-64</label>
-						<input type="radio" id="Over 65" value="Over 65">
-						<label for="Over 65">Over 65</label>
+						<input type="radio"name="age">
+						<label>Under 18</label>
+						<input type="radio" name="age">
+						<label>19-29</label>
+						<input type="radio" name="age">
+						<label>30-45</label>
+						<input type="radio" name="age">
+						<label>46-64</label>
+						<input type="radio" name="age">
+						<label>Over 65</label>
 						<hr>
 					</div>
 					<div id="questionTwo">
 						<h3>Question 2: How At Risk Would You Consider Yourself?</h3>
 						<hr>
-						<input type="radio" id="Low Risk" value="Low Risk">
-						<label for="Low Risk">Low Risk</label>
-						<input type="radio" id="High Risk" value="High Risk">
-						<label for="High Risk">High Risk</label>
-						<input type="radio" id="Not Sure" value="Not Sure">
-						<label for="Not Sure">Not Sure</label>
+						<input type="radio" name="risk">
+						<label>Low Risk</label>
+						<input type="radio" name="risk">
+						<label>High Risk</label>
+						<input type="radio" name="risk">
+						<label>Not Sure</label>
 						<hr>
 					</div>
 				</form>
-				<h3>Question 3: Where Are You?</h3><br>
 				<div id="questionThree">
+					<h3>Question 3: Where Are You?</h3><br>
 					<a data-toggle="collapse" href="#collapseLocation">Why Do We Need This?</a>
 					<div class="collapse" id="collapseLocation">
 						<hr>
@@ -73,49 +92,81 @@
 					<div id="questionFour">
 						<h3>Question 4: How Many People Live In Your House/Flat?</h3>
 						<hr>
-						<input type="radio" id="I Live By Myself" value="I Live By Myself">
-						<label for="I Live By Myself">I Live By Myself</label>
-						<input type="radio" id="1-2" value="1-2">
-						<label for="1-2">1-2</label>
-						<input type="radio" id="3-5" value="3-5">
-						<label for="3-5">3-5</label>
-						<input type="radio" name="Over 6" id="Over 6">
-						<label for="Over 6">Over 6</label>
+						<input type="radio" name="occupance">
+						<label>I Live By Myself</label>
+						<input type="radio" name="occupance">
+						<label>1-2</label>
+						<input type="radio" name="occupance">
+						<label>3-5</label>
+						<input type="radio" name="occupance">
+						<label>Over 6</label>
 						<hr>
 					</div>
 					<div id="questionFive">
 						<h3>Question 5: Are You A Keyworker?</h3>
-						<input type="radio" id="Yes In Healthcare" value="Yes In Healthcare">
-						<label for="Yes In Healthcare">Yes In Healthcare</label>
-						<input type="radio" name="Yes In Retail" id="Yes In Retail">
-						<label for="Yes In Retail">Yes In Retail</label>
-						<input type="radio" id="Yes In Another Industry" value="Yes In Another Industry">
-						<label for="Yes In Another Industry">Yes In Another Industry</label>
-						<input type="radio" id="No" value="No">
+						<hr>
+						<input type="radio" name="keyworker">
+						<label>Yes In Healthcare</label>
+						<input type="radio" name="keyworker">
+						<label>Yes In Retail</label>
+						<input type="radio" name="keyworker">
+						<label>Yes In Another Industry</label>
+						<input type="radio" name="keyworker">
 						<label for="No">No</label>
 						<hr>
 					</div>
+					<div id="questionSix">
+						<h3>Question 6: How Many Times On Average Do You Leave Your House In A Week?</h3>
+						<hr>
+						<input type="radio" name="outside">
+						<label>Never</label>	
+						<input type="radio" name="outside">
+						<label>Only Once</label>
+						<input type="radio" name="outside">
+						<label>A Couple Of Times</label>
+						<input type="radio" name="outside">
+						<label>Almost Everyday</label>
+						<input type="radio" name="outside">
+						<label>Everyday</label>
+						<hr>
+					</div>
 				</form>
+				<div id="questionSeven">
+					<h3>Question 7: How Is Your Respiratory System?</h3>
+					<a data-toggle="collapse" href="#collapseAudio">How This Will Work</a>
+					<hr>
+					<div class="collapse" id="collapseAudio">
+						<p>
+							Coronavirus is a respiratory disease, which can be fatal to people with issues with breathing. This test will ask 
+							you to allow access to the microphone on your device. Upon allowing access please press on the record button and 
+							say something. This sound file will then get put through a deep analysis computer programme, which will analyse 
+							your voice to gather information on the quality of your breathing. The phrase must be longer than a single word so 
+							we highly recommend saying something like your full name and date of birth as that in all cases will ensure the 
+							programme has enough data to work with. WITHOUT THIS INFORMATION YOUR RESULTS MAY BE INCORRECT!
+						</p>
+						<hr>
+					</div>
+					<button class="btn btn-dark" onclick="audioSetup()">Audio Permission</button><br><br>
+					<button class="btn btn-dark" onclick="audioHack()">Record Audio</button>
+					<hr>
+				</div>
+				
 			
-			
-
-
-
-				<button class="btn btn-dark" onclick="audioSetup()">Audio Permission</button><br><br>
-				<button class="btn btn-dark" onclick="audioHack()">Record Audio</button>
-
 
 				<a href="#top"><button class="btn btn-dark"  onclick="openHack()">Your Results!!!</button></a>
 			</section>
 
+			
+
 			<div class="form-popup" id="hackContainer">
+				<h1>Your Results</h1>
 				<div id="warning"></div>
 				<script src="js/geolocation.js"></script>
 				<div id="map"></div>
 				<div id="messageContainer">
 				<img id="phoneIMG" src="images/phone.png">
 				</div>
-				<p id="debug"></p>
+				<p id="debug"></p><br>
 				<button class="btn btn-dark" onclick="playAudio()">Play Recorded Audio</button><br><br>
 				<script src="js/position.js"></script>
 				<script src="js/audio.js"></script>

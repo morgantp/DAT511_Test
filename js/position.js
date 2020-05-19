@@ -35,7 +35,6 @@
 		messageContainer.style.webkitTransform = messageContainer.style.MozTransform = messageContainer.style.transform = transform;
 		// 2D-only for Opera
 		messageContainer.style.OTransform = 'rotate(' +alpha+ 'deg)'; 
-
 	}
 
 })();
