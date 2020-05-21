@@ -11,7 +11,7 @@ function getLocation() {
 
         if(altitude = null) {
             alt.textContent = 'Altitude Not Supported On Device';
-        } else if(altitude < 0) {
+        } else {
             alt.textContent = 'Altitude: '+altitude+'m';
         }
 
