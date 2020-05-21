@@ -119,6 +119,10 @@ label {
 	display: grid;
 }
 
+#alt {
+	font-family: 'Playfair Display', serif;
+}
+
 .btn-dark {
 	font-family: 'Playfair Display', serif;
 }

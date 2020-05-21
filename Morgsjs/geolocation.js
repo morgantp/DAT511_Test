@@ -6,7 +6,15 @@ function getLocation() {
 
         var alt = document.getElementById('alt');
 
-        alt.textContent = 'Altitude: '+altitude;
+        isNotSupported = (altitude < 0) ? true : false;
+
+        if(isNotSupported == false) {
+            alt.textContent = 'Altitude Not Supported On Device';
+        } else {
+            alt.textContent = 'Altitude: '+altitude+'M';
+        }
+
+        
 
         var map = L.map('map').setView([latitude, longitude], 12);
 

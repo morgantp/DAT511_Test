@@ -17,7 +17,7 @@
 		beta = Math.floor(event.beta);
 		gamma = Math.floor(event.gamma);
 		
-		debug.textContent = 'Alpha: '+alpha+ ', Beta: ' +beta+ ', and Gamma is: ' +gamma;		
+		debug.textContent = 'Alpha: '+alpha+ ', Beta: ' +beta+ ', and Gamma is: ' +gamma ;		
 		
 		transform = 'rotateZ(' +alpha+ 'deg) rotateX(' +beta+ 'deg) rotateY(' +gamma+ 'deg)';			
 		// 3D Transform	
