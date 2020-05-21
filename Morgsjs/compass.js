@@ -10,7 +10,7 @@ navigator.geolocation.watchPosition(position => {
     var transform = compassContainer.style.transform;
 		    
     
-    transform = 'rotate(' +heading;
+    transform = 'rotateZ(' +heading;
     compassContainer.style.webkitTransform = compassContainer.style.MozTransform = compassContainer.style.transform = transform;
 		
 });
