@@ -8,9 +8,8 @@ function getLocation() {
 
         var alt = document.getElementById('alt');
 
-        isNotSupported = (altitude == null) ? true : false;
 
-        if(isNotSupported == false) {
+        if(altitude == null) {
             alt.textContent = 'Altitude Not Supported On Device';
         } else {
             alt.textContent = 'Altitude: '+altitude+'M';
