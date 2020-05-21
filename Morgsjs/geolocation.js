@@ -1,11 +1,11 @@
 function getLocation() {
-    navigator.geolocation.getCurrentPosition(position => {
+    navigator.geolocation.watchPosition(position => {
         let latitude = position.coords.latitude;
         let longitude = position.coords.longitude;
         let altitude = position.coords.altitude;
-
-        console.log(position);
-
+        let heading = position.coords.heading;
+        var compass = document.getElementById('compass');
+        var info = document.getElementById('compassInfo');
         var alt = document.getElementById('alt');
 
         if(altitude == null) {
@@ -13,6 +13,10 @@ function getLocation() {
         } else if(altitude > 0) {
             alt.textContent = 'Altitude: '+altitude+'m';
         };
+
+        info.textContent = 'Heading: '+heading;
+        compass.style.transform = `rotate(${heading}deg)`
+
 
         var map = L.map('map').setView([latitude, longitude], 12);
 
