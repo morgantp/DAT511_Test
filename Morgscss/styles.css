@@ -96,7 +96,6 @@ p {
 }
 
 body {
-	font-family: Helvetica, Arial, sans-serif;
 	-webkit-perspective: 500px;
 	-moz-perspective: 500px;
 	color: black;
@@ -140,6 +139,11 @@ label {
 }
 
 #phoneIMG {
+	width: 20%;
+	padding-top: 10px;
+}
+
+#compassIMG {
 	width: 20%;
 	padding-top: 10px;
 }
