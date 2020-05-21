@@ -8,12 +8,36 @@
 			integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
 			crossorigin=""></script>
 			<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-			<link rel="stylesheet" href="css/styles.css">
-			<link rel="icon" href="images/phone invasion logo.png">
+			<link rel="stylesheet" href="Morgscss/styles.css">
+			<link rel="icon" href="Morgsimages/phone invasion logo.png">
 		</head>
 		<body>
-			<section id="top" class="headerContainer">
+			<nav class="navbar navbar-expand-md navbar-light text-uppercase" style="background-color: white;">
+				<div class="col-md-1"></div>
+				<a href="">
+					<img src="Morgsimages/coruptedTransparentIcon.png" class="navbar-brand branding">
+				</a>
+				<button class="navbar-toggler text-uppercase text-white rounded" style="background-color: #720429;" data-toggle="collapse" data-target="#mobileMenu">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="mobileMenu">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#borisbot">BorisBot</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#phoneinvasion">Phone Invasion</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#animation">Animation</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-1"></div>
+			</nav>		
+			<section class="headerContainer">
 				<a id="myBtn">
 					<h1 id="questionMark">?</h1>
 				</a>
@@ -29,7 +53,7 @@
 				</div>
 
 				</div>
-				<img id="phoneInvasionLogo" src="images/phone invasion logo.png" alt="Phone Invasion">
+				<img id="phoneInvasionLogo" src="Morgsimages/phone invasion logo.png" alt="Phone Invasion">
 			</section>
 			<section id="quiz">
 				<h1 id="mainTitle">Are You Safe From The Coronavirus?</h1>
@@ -132,7 +156,7 @@
 					</div>
 				</form>
 				<div id="questionSeven">
-					<h3>Question 7: How Is Your Respiratory System?</h3>
+					<h3>Question 7: How Is Your Respiratory System?</h3><br>
 					<a data-toggle="collapse" href="#collapseAudio">How This Will Work</a>
 					<hr>
 					<div class="collapse" id="collapseAudio">
@@ -146,33 +170,73 @@
 						</p>
 						<hr>
 					</div>
-					<button class="btn btn-dark" onclick="audioSetup()">Audio Permission</button><br><br>
-					<button class="btn btn-dark" onclick="audioHack()">Record Audio</button>
+					<button class="btn btn-dark" onclick="audioSetup()">Audio Permission</button><br>
+					<p>Allow Access To Microphone</p><br>
+					<button class="btn btn-dark" onclick="audioHack()">Record Audio</button><br>
+					<p>Press This Button And Say Your Name And Date Of Birth</p>
+
 					<hr>
 				</div>
-				
-			
-
-				<a href="#top"><button class="btn btn-dark"  onclick="openHack()">Your Results!!!</button></a>
+				<form>
+					<div id="questionEight">
+						<h3>Question 8: Do You Smoke?</h3>
+						<hr>
+						<input type="radio" name="smoke">
+						<label>Yes I'm A Heavy Smoker (10+ A Day)</label>
+						<input type="radio" name="smoke">
+						<label>Yes I'm A Light Smoker (Less Than 10 A Day)</label>
+						<input type="radio" name="smoke">
+						<label>I Don't Smoke</label>
+						<hr>
+					</div>	
+					<div id="questionNine">
+						<h3>Question 9: Have You Been In Contact With Someone Who Has Had A Confirmed Case?</h3>
+						<hr>
+						<input type="radio" name="contact">
+						<label>Yes I Have</label>
+						<input type="radio" name="contact">
+						<label>No I Haven't</label>
+						<input type="radio" name="contact">
+						<label>I'm Not Sure</label>
+						<hr>
+					</div>
+					<div id="questionTen">
+						<h3></h3>
+					</div>
+				</form>
+				<a href="#hackContainer"><button id="footerButton" class="btn btn-dark"  onclick="openHack()">Your Results!!!</button></a>
 			</section>
-
-			
-
 			<div class="form-popup" id="hackContainer">
-				<h1>Your Results</h1>
-				<div id="warning"></div>
-				<script src="js/geolocation.js"></script>
+				<h1 class="popupTitle">Your Results</h1>
+				<a data-toggle="collapse" href="#collapseDisclaimer">***DISCLAIMER***</a>
+					<hr id="popupHr">
+					<div class="collapse" id="collapseDisclaimer">
+						<p>
+							None of the information you have given is being sent or stored anywhere. This data is session specific and when 
+							you leave the page this information will be automatically lost. The purpose of this exhibit is to show how easy it 
+							is to access sensitive data online. I and all of the other inventors cannot see or access your information.
+						</p>
+						<hr id="popupHr">
+					</div>
+				<h3 id="popupTitle">We Know Where You Are!</h3>
+				<script src="Morgsjs/geolocation.js"></script>
 				<div id="map"></div>
+				<div id="alt"></div>
+				<hr id="popupHr">
+				<h3 id="popupTitle">We Know What You've Been Doing!</h3>
 				<div id="messageContainer">
-				<img id="phoneIMG" src="images/phone.png">
+				<img id="phoneIMG" src="Morgsimages/phone.png">
 				</div>
 				<p id="debug"></p><br>
+				<hr id="popupHr">
+				<h3 id="popupTitle">We Know Your Voice!</h3><br>
 				<button class="btn btn-dark" onclick="playAudio()">Play Recorded Audio</button><br><br>
-				<script src="js/position.js"></script>
-				<script src="js/audio.js"></script>
-				<button class="btn btn-dark" onclick="closeHack()">Close</button>
+				<hr id="popupHr">
+				<script src="Morgsjs/position.js"></script>
+				<script src="Morgsjs/audio.js"></script>
+				<button id="footerButton" class="btn btn-dark" onclick="closeHack()">Close</button>
 			</div>
-			<script src="js/script.js"></script>
+			<script src="Morgsjs/script.js"></script>
 			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
