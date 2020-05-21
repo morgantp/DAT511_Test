@@ -4,19 +4,15 @@ function getLocation() {
         let longitude = position.coords.longitude;
         let altitude = position.coords.altitude;
 
-        console.log(position)
+        console.log(position);
 
         var alt = document.getElementById('alt');
-
 
         if(altitude == null) {
             alt.textContent = 'Altitude Not Supported On Device';
         } else if(altitude > 0) {
             alt.textContent = 'Altitude: '+altitude+'m';
-        }
-
-        console.log(altitude);
-       
+        };
 
         var map = L.map('map').setView([latitude, longitude], 12);
 
