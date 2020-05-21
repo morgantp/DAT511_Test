@@ -11,9 +11,9 @@ function getLocation() {
         isNotSupported = (altitude == null) ? true : false;
 
         if(isNotSupported == false) {
-            alt.textContent = 'Altitude: '+altitude+'M';
-        } else {
             alt.textContent = 'Altitude Not Supported On Device';
+        } else {
+            alt.textContent = 'Altitude: '+altitude+'M';
         }
 
         var map = L.map('map').setView([latitude, longitude], 12);
