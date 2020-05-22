@@ -47,7 +47,34 @@
 				<div class="modal-content">
 					<h1 id="statementTitle">Supporting Statement</h1>
 					<hr id="modalHr">
-					<p>Some text in the Modal..</p>
+					<p>
+						Thanks to the advances in modern technology, specifically smartphones and tablets, the amount of private information 
+						people are sharing online is growing and with it the threats and dangers to our data is growing at a commensurate rate. 
+						Medical history and location data, is incredibly private information but now we share it without thinking about the 
+						possible ramifications if the information got in the hands of someone with malicious intent. <i>Facebook</i> is a great 
+						example of this; it is filled with third party apps and quizzes that in most cases ask for permission to access parts 
+						of your profile, yet no one stops to think why it needs this data. In an episode of the popular dystopian science 
+						fiction show <i>Black Mirror</i> called <i>Be Right Back</i> a woman's partner dies in a car accident. She starts 
+						talking to an artificial intelligence made using her partner's internet presence to be able to accurately represent 
+						his personality. This meant she could talk to a computer who would respond how he would when he was alive. This is 
+						a terrifying idea, but isn’t too far off the realm of possibility as our social lives become more and more digital, 
+						we put more of our personalities online. I challenge you to think about every message, email, snap, whatsapp you have 
+						sent in the last 24 hours. If someone was to get all of these messages what information could they learn? Your sense 
+						of humour, your favourite food, movie, game, or even more sensitive information; bank details, family names or your 
+						home address. While nearly all social medias encrypt your messages it brings back what I mentioned earlier; permission. 
+						If a website can trick you into allowing access to your most personal data these “scam artists” would have successfully 
+						hacked their way into your life. Now these sort of data hacks are easily stopped by clearing an app's permissions or 
+						changing your password, however a shockingly large amount of people don’t fully understand the technology they use 
+						everyday and it is this naivety that hackers rely on in order to get sensitive information. Now data is an issue which 
+						is consistently brought up in government most notably when the founder of <i>Facebook, Mark Zuckerberg</i> went to the 
+						United States Congress to answer claims that <i>Facebook</i> had been mismanaging it’s user’s data. In these 
+						investigations <i>Zuckerberg</i> admitted that all user information exists in <i>Facebook’s</i> databases but they 
+						would never access or share this information as it would be a huge breach of someone’s privacy. However, we’re 
+						hearing more and more news stories of a large site being victim to a cyber attack where millions of user’s data 
+						can be compromised. If this was to happen to a platform as large as <i>Facebook</i> the fallout could be catastrophic. 
+						During this current crisis people are more and more controlled by fear. In Phone Invasion I hope to show how someone 
+						could craft a narrative to get as much data from you as possible. 
+					</p>
 					<hr id="modalHr">
 					<button id="close" class="btn btn-dark">Close</button>
 				</div>
@@ -158,8 +185,8 @@
 				<div id="questionSeven">
 					<h3>Question 7: How Is Your Respiratory System?</h3><br>
 					<a data-toggle="collapse" href="#collapseAudio">How This Will Work</a>
-					<hr>
 					<div class="collapse" id="collapseAudio">
+						<hr>
 						<p>
 							Coronavirus is a respiratory disease, which can be fatal to people with issues with breathing. This test will ask 
 							you to allow access to the microphone on your device. Upon allowing access please press on the record button and 
@@ -168,8 +195,8 @@
 							we highly recommend saying something like your full name and date of birth as that in all cases will ensure the 
 							programme has enough data to work with. WITHOUT THIS INFORMATION YOUR RESULTS MAY BE INCORRECT!
 						</p>
-						<hr>
 					</div>
+					<hr>
 					<button class="btn btn-dark" onclick="audioSetup()">Audio Permission</button><br>
 					<p>Allow Access To Microphone</p><br>
 					<button class="btn btn-dark" onclick="audioHack()">Record Audio</button><br>
@@ -201,34 +228,37 @@
 						<hr>
 					</div>
 					<div id="questionTen">
-						<h3>Question 10: </h3>
+						<h3>Question 10: Have You Done Enough To Keep Yourself Safe?</h3>
+						<input type="radio" name="safe">
+						<label>We'll See</label>
+						<input type="radio" name="safe">
+						<label>We'll See</label>
+						<input type="radio" name="safe">
+						<label>We'll See</label>
 					</div>
+					<hr>
 				</form>
-				<a href="#hackContainer"><button id="footerButton" class="btn btn-dark"  onclick="openHack()">Your Results!!!</button></a>
+				<a href="#hackContainer"><button id="footerButton" class="btn btn-dark"  onclick="openHack()">Your Results</button></a>
 			</section>
+			<div id="footer">
+				<p id="declaration" class="text-center"><large>Copyright &copy; <span id="autoDate"></span> Morgan Thomas-Price</large></p>					
+			</div>
 			<div class="form-popup" id="hackContainer">
 				<h1 class="popupTitle">Your Results</h1>
 				<a data-toggle="collapse" href="#collapseDisclaimer">***DISCLAIMER***</a>
-					<hr id="popupHr">
 					<div class="collapse" id="collapseDisclaimer">
+						<hr id="popupHr">
 						<p>
 							None of the information you have given is being sent or stored anywhere. This data is session specific and when 
 							you leave the page this information will be automatically lost. The purpose of this exhibit is to show how easy it 
 							is to access sensitive data online. I and all of the other inventors cannot see or access your information.
 						</p>
-						<hr id="popupHr">
 					</div>
+					<hr id="popupHr">
 				<h3 id="popupTitle">We Know Where You Are!</h3>
 				<script src="Morgsjs/geolocation.js"></script>
 				<div id="map"></div>
 				<div id="alt"></div>
-				<hr id="popupHr">
-				<h3 id="popupTitle">We Know What Direction You're Facing!</h3>
-				<div id="compass">
-					<img id="compassIMG" src="Morgsimages/compassIcon.png">
-				</div>
-				<div id="compassInfo"></div>
-				<p>test 1</p>
 				<hr id="popupHr">
 				<h3 id="popupTitle">We Know What You've Been Doing!</h3>
 				<div id="messageContainer">
@@ -239,8 +269,8 @@
 				<h3 id="popupTitle">We Know Your Voice!</h3><br>
 				<button class="btn btn-dark" onclick="playAudio()">Play Recorded Audio</button><br><br>
 				<hr id="popupHr">
-				<!-- <script src="Morgsjs/position.js"></script>
-				<script src="Morgsjs/audio.js"></script> -->
+				<script src="Morgsjs/position.js"></script>
+				<script src="Morgsjs/audio.js"></script>
 				<button id="footerButton" class="btn btn-dark" onclick="closeHack()">Close</button>
 			</div>
 			<script src="Morgsjs/script.js"></script>
