@@ -41,6 +41,10 @@ h1, h3, a {
     font-size: 4vw;
 }
 
+#statementBody {
+	width: 95%;
+}
+
 .modal {
   display: none; 
   position: fixed; 
@@ -124,8 +128,14 @@ label {
 	font-family: 'Playfair Display', serif;
 }
 
+#accurate {
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+}
+
 .btn-dark {
 	font-family: 'Playfair Display', serif;
+	font-size: 20px;
 }
 
 #quiz {
@@ -172,7 +182,8 @@ label {
 	background-color: lightblue;
   }
 
-  #map {
+#map {
+	font-family: 'Playfair Display', serif;
 	text-align: center;
     width: 80%;
 	height: 400px;

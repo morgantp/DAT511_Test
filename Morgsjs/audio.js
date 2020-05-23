@@ -28,7 +28,7 @@ function audioHack() {
 
       setTimeout(() => {
         mediaRecorder.stop();
-      }, 3000);
+      }, 6000);
     });
 }
   
