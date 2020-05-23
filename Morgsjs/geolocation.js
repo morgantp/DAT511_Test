@@ -26,7 +26,7 @@ function getLocation() {
 		}).setLatLng([latitude, longitude])
           .setContent('You are within this circle');
           
-        var map = L.map('map').setView([latitude, longitude], 16);
+        var map = L.map('map').setView([latitude, longitude], 12);
 
         L.circle([latitude, longitude], {radius: accuracy}).addTo(map).bindPopup(popup);
 
